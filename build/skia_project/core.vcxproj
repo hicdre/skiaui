@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B7760B5E-BFA8-486B-ACFD-49E3A6DE8E76}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>core</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\config\define.global" />
+    <Import Project="..\..\config\skia_global.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\config\define.global" />
+    <Import Project="..\..\config\skia_global.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\..\..\gyp\bin\;$(MSBuildProjectDirectory)\..\..\gyp\bin\</ExecutablePath>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <TargetName>skia_core</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SkiaPath)\include\config;$(SkiaPath)\include\core;$(SkiaPath)\include\pipe;$(SkiaPath)\include\ports;$(SkiaPath)\include\utils;$(SkiaPath)\include\xml;$(SkiaPath)\src\core;$(SkiaPath)\src\image;$(SkiaPath)\gyp\config\win;$(SkiaPath)\include\gpu;$(SkiaPath)\src\gpu;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4345;4390;4554;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_REDEFINE_ROOT2OVER2_TO_MAKE_ARCTOS_CONVEX;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_DEBUG;GR_DEBUG=1;SK_DEVELOPER=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib />
+    <Link>
+      <AdditionalDependencies>OpenGL32.lib;usp10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SkiaPath)\include\config;$(SkiaPath)\include\core;$(SkiaPath)\include\pipe;$(SkiaPath)\include\ports;$(SkiaPath)\include\utils;$(SkiaPath)\include\xml;$(SkiaPath)\src\core;$(SkiaPath)\src\image;$(SkiaPath)\gyp\config\win;$(SkiaPath)\include\gpu;$(SkiaPath)\src\gpu;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_REDEFINE_ROOT2OVER2_TO_MAKE_ARCTOS_CONVEX;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_DEBUG;GR_DEBUG=1;SK_DEVELOPER=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SkiaPath)\include\config;$(SkiaPath)\include\core;$(SkiaPath)\include\pipe;$(SkiaPath)\include\ports;$(SkiaPath)\include\utils;$(SkiaPath)\include\xml;$(SkiaPath)\src\core;$(SkiaPath)\src\image;$(SkiaPath)\gyp\config\win;$(SkiaPath)\include\gpu;$(SkiaPath)\src\gpu;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4345;4390;4554;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <Optimization>Full</Optimization>
+      <PreprocessorDefinitions>NDEBUG;SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_REDEFINE_ROOT2OVER2_TO_MAKE_ARCTOS_CONVEX;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_RELEASE;GR_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Lib>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>OpenGL32.lib;usp10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SkiaPath)\include\config;$(SkiaPath)\include\core;$(SkiaPath)\include\pipe;$(SkiaPath)\include\ports;$(SkiaPath)\include\utils;$(SkiaPath)\include\xml;$(SkiaPath)\src\core;$(SkiaPath)\src\image;$(SkiaPath)\gyp\config\win;$(SkiaPath)\include\gpu;$(SkiaPath)\src\gpu;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_REDEFINE_ROOT2OVER2_TO_MAKE_ARCTOS_CONVEX;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_RELEASE;GR_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\skia\src\core\SkRTree.h" />
+    <ClInclude Include="..\..\skia\src\core\SkCoreBlitters.h" />
+    <ClInclude Include="..\..\skia\src\core\SkTextFormatParams.h" />
+    <ClInclude Include="..\..\skia\src\core\SkTLList.h" />
+    <ClInclude Include="..\..\skia\src\core\SkTypefaceCache.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBitmapProcState_matrix.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBlitBWMaskTemplate.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBitmapProcState.h" />
+    <ClInclude Include="..\..\skia\src\core\SkSinTable.h" />
+    <ClInclude Include="..\..\skia\src\core\SkPictureRecord.h" />
+    <ClInclude Include="..\..\skia\src\core\SkStroke.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBitmapSamplerTemplate.h" />
+    <ClInclude Include="..\..\skia\src\core\SkScanPriv.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBBoxHierarchyRecord.h" />
+    <ClInclude Include="..\..\skia\src\core\SkTSort.h" />
+    <ClInclude Include="..\..\skia\src\core\SkConfig8888.h" />
+    <ClInclude Include="..\..\skia\src\core\ARGB32_Clamp_Bilinear_BitmapShader.h" />
+    <ClInclude Include="..\..\skia\src\core\SkPicturePlayback.h" />
+    <ClInclude Include="..\..\skia\src\core\SkScan.h" />
+    <ClInclude Include="..\..\skia\src\core\SkFP.h" />
+    <ClInclude Include="..\..\skia\src\core\SkPathHeap.h" />
+    <ClInclude Include="..\..\skia\src\core\SkMaskGamma.h" />
+    <ClInclude Include="..\..\skia\src\core\SkPathRef.h" />
+    <ClInclude Include="..\..\skia\src\core\SkTemplatesPriv.h" />
+    <ClInclude Include="..\..\skia\src\core\SkConcaveToTriangles.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBlitter.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBitmapHeap.h" />
+    <ClInclude Include="..\..\skia\src\core\SkAntiRun.h" />
+    <ClInclude Include="..\..\skia\src\core\SkSpriteBlitter.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBitmapProcShader.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBBoxRecord.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBitmapShader16BilerpTemplate.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBitmapProcState_sample.h" />
+    <ClInclude Include="..\..\skia\src\core\SkPictureFlat.h" />
+    <ClInclude Include="..\..\skia\src\core\SkGlyphCache.h" />
+    <ClInclude Include="..\..\skia\src\core\SkSpriteBlitterTemplate.h" />
+    <ClInclude Include="..\..\skia\src\core\SkStrokerPriv.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBBoxHierarchy.h" />
+    <ClInclude Include="..\..\skia\src\core\SkTileGrid.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBitmapSampler.h" />
+    <ClInclude Include="..\..\skia\src\core\SkPictureStateTree.h" />
+    <ClInclude Include="..\..\skia\src\core\SkCordic.h" />
+    <ClInclude Include="..\..\skia\src\core\SkFloat.h" />
+    <ClInclude Include="..\..\skia\src\core\SkRegionPriv.h" />
+    <ClInclude Include="..\..\skia\src\core\SkCubicClipper.h" />
+    <ClInclude Include="..\..\skia\src\core\SkFilterProc.h" />
+    <ClInclude Include="..\..\skia\src\core\SkEdge.h" />
+    <ClInclude Include="..\..\skia\src\core\SkDrawProcs.h" />
+    <ClInclude Include="..\..\skia\src\core\SkBitmapShaderTemplate.h" />
+    <ClInclude Include="..\..\skia\src\core\SkQuadClipper.h" />
+    <ClInclude Include="..\..\skia\include\core\SkDither.h" />
+    <ClInclude Include="..\..\skia\include\core\SkDrawLooper.h" />
+    <ClInclude Include="..\..\skia\include\core\SkComposeShader.h" />
+    <ClInclude Include="..\..\skia\include\core\SkUnPreMultiply.h" />
+    <ClInclude Include="..\..\skia\include\core\SkColorPriv.h" />
+    <ClInclude Include="..\..\skia\include\core\SkDrawFilter.h" />
+    <ClInclude Include="..\..\skia\include\core\SkInstCnt.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTInternalLList.h" />
+    <ClInclude Include="..\..\skia\include\core\SkRasterizer.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTRegistry.h" />
+    <ClInclude Include="..\..\skia\include\core\SkScalarCompare.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTrace.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTypeface.h" />
+    <ClInclude Include="..\..\skia\include\core\SkMetaData.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTileGridPicture.h" />
+    <ClInclude Include="..\..\skia\include\core\SkStrokeRec.h" />
+    <ClInclude Include="..\..\skia\include\core\SkPathEffect.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTDict.h" />
+    <ClInclude Include="..\..\skia\include\core\SkColorShader.h" />
+    <ClInclude Include="..\..\skia\include\core\SkFloatingPoint.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTemplates.h" />
+    <ClInclude Include="..\..\skia\include\core\SkColor.h" />
+    <ClInclude Include="..\..\skia\include\core\SkMaskFilter.h" />
+    <ClInclude Include="..\..\skia\include\core\SkRect.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTime.h" />
+    <ClInclude Include="..\..\skia\include\core\SkGeometry.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTDStack.h" />
+    <ClInclude Include="..\..\skia\include\core\SkXfermode.h" />
+    <ClInclude Include="..\..\skia\include\core\SkUtils.h" />
+    <ClInclude Include="..\..\skia\include\core\SkWeakRefCnt.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTDArray.h" />
+    <ClInclude Include="..\..\skia\include\core\SkReader32.h" />
+    <ClInclude Include="..\..\skia\include\core\SkBitmap.h" />
+    <ClInclude Include="..\..\skia\include\core\SkFontHost.h" />
+    <ClInclude Include="..\..\skia\include\core\SkRefCnt.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTypes.h" />
+    <ClInclude Include="..\..\skia\include\core\Sk64.h" />
+    <ClInclude Include="..\..\skia\include\core\SkPaint.h" />
+    <ClInclude Include="..\..\skia\include\core\SkPackBits.h" />
+    <ClInclude Include="..\..\skia\include\core\SkChecksum.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTLazy.h" />
+    <ClInclude Include="..\..\skia\include\core\SkPixelRef.h" />
+    <ClInclude Include="..\..\skia\include\core\SkClipStack.h" />
+    <ClInclude Include="..\..\skia\include\core\SkRRect.h" />
+    <ClInclude Include="..\..\skia\include\core\SkPathMeasure.h" />
+    <ClInclude Include="..\..\skia\include\core\SkDraw.h" />
+    <ClInclude Include="..\..\skia\include\core\SkImageFilter.h" />
+    <ClInclude Include="..\..\skia\include\core\SkString.h" />
+    <ClInclude Include="..\..\skia\include\core\SkFlattenable.h" />
+    <ClInclude Include="..\..\skia\include\core\SkOSFile.h" />
+    <ClInclude Include="..\..\skia\include\core\SkPicture.h" />
+    <ClInclude Include="..\..\skia\include\core\SkMatrix.h" />
+    <ClInclude Include="..\..\skia\include\core\SkDevice.h" />
+    <ClInclude Include="..\..\skia\include\core\SkDeque.h" />
+    <ClInclude Include="..\..\skia\include\core\SkRandom.h" />
+    <ClInclude Include="..\..\skia\include\core\SkBounder.h" />
+    <ClInclude Include="..\..\skia\include\core\SkGraphics.h" />
+    <ClInclude Include="..\..\skia\include\core\SkMallocPixelRef.h" />
+    <ClInclude Include="..\..\skia\include\core\SkThread_platform.h" />
+    <ClInclude Include="..\..\skia\include\core\SkAdvancedTypefaceMetrics.h" />
+    <ClInclude Include="..\..\skia\include\core\SkCanvas.h" />
+    <ClInclude Include="..\..\skia\include\core\SkPoint.h" />
+    <ClInclude Include="..\..\skia\include\core\SkFloatBits.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTArray.h" />
+    <ClInclude Include="..\..\skia\include\core\SkColorFilter.h" />
+    <ClInclude Include="..\..\skia\include\core\SkUnitMapper.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTScopedPtr.h" />
+    <ClInclude Include="..\..\skia\include\core\SkBlitRow.h" />
+    <ClInclude Include="..\..\skia\include\core\SkTSearch.h" />
+    <ClInclude Include="..\..\skia\include\core\SkFixed.h" />
+    <ClInclude Include="..\..\skia\include\core\SkChunkAlloc.h" />
+    <ClInclude Include="..\..\skia\include\core\SkStream.h" />
+    <ClInclude Include="..\..\skia\include\core\SkShader.h" />
+    <ClInclude Include="..\..\skia\include\core\SkEndian.h" />
+    <ClInclude Include="..\..\skia\include\core\SkData.h" />
+    <ClInclude Include="..\..\skia\include\core\SkPath.h" />
+    <ClInclude Include="..\..\skia\include\core\SkWriter32.h" />
+    <ClInclude Include="..\..\skia\include\core\SkRegion.h" />
+    <ClInclude Include="..\..\skia\include\core\SkMask.h" />
+    <ClInclude Include="..\..\skia\include\core\SkScalar.h" />
+    <ClInclude Include="..\..\skia\include\core\SkMath.h" />
+    <ClInclude Include="..\..\skia\include\core\SkThread.h" />
+    <ClInclude Include="..\..\skia\include\core\SkMMapStream.h">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\skia\src\pipe\SkGPipeRead.cpp" />
+    <ClCompile Include="..\..\skia\src\pipe\SkGPipeWrite.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkScan_Hairline.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBlitRow_D4444.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkColorFilter.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBitmap.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPathEffect.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkEdge.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBlitter_A8.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkColorTable.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkScan_Path.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBBoxHierarchy.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPaint.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkInstCnt.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkSpriteBlitter_ARGB32.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBlitRow_D32.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBlitter_4444.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkFlattenable.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkClipStack.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkDebug.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPathHeap.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBlitter_RGB16.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkString.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkDevice.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkGeometry.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkAAClip.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkChunkAlloc.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkScan_AntiPath.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkMath.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkMask.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBitmapProcState_matrixProcs.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPictureFlat.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkTypefaceCache.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkMetaData.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkAnnotation.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkTLS.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkUnPreMultiply.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkRefDict.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkRasterClip.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkScalar.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPtrRecorder.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBitmap_scroll.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkEdgeClipper.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPixelRef.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPath.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkScan_Antihair.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBBoxRecord.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkCanvas.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBitmapProcShader.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkSpriteBlitter_RGB16.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkEdgeBuilder.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkStroke.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkLineClipper.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkStrokeRec.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkRegion.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkFlattenableBuffers.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPackBits.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkData.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkFloatBits.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkMaskFilter.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkAdvancedTypefaceMetrics.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkColor.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkTypeface.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkGlyphCache.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkRRect.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBlitter_Sprite.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkFilterProc.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPicturePlayback.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPictureStateTree.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkMatrix.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkMaskGamma.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBlitter_ARGB32.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkConcaveToTriangles.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkWriter32.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkTileGridPicture.cpp" />
+    <ClCompile Include="..\..\skia\src\core\Sk64.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkRefCnt.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkUtils.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPoint.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkDeque.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBlitter_A1.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkMallocPixelRef.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkProcSpriteBlitter.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkDither.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkFontHost.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBlitMask_D32.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkScan.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkQuadClipper.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBuffer.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBitmapHeap.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPicture.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkTileGrid.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkCubicClipper.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkFloat.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkRasterizer.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPictureRecord.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkRegion_path.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkOrderedWriteBuffer.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkGraphics.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkPathMeasure.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkShader.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkDraw.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBitmapSampler.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBBoxHierarchyRecord.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkScalerContext.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkAlphaRuns.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkStrokerPriv.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkRect.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBitmapProcState.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBlitRow_D16.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkComposeShader.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkRTree.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkTSearch.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkCordic.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkOrderedReadBuffer.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkDeviceProfile.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkConfig8888.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkImageFilter.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkXfermode.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkStream.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkBlitter.cpp" />
+    <ClCompile Include="..\..\skia\src\core\SkMMapStream.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\image\SkDataPixelRef.cpp" />
+    <ClCompile Include="..\..\skia\src\image\SkImage_Codec.cpp" />
+    <ClCompile Include="..\..\skia\src\image\SkImage.cpp" />
+    <ClCompile Include="..\..\skia\src\image\SkSurface_Raster.cpp" />
+    <ClCompile Include="..\..\skia\src\image\SkSurface.cpp" />
+    <ClCompile Include="..\..\skia\src\image\SkImagePriv.cpp" />
+    <ClCompile Include="..\..\skia\src\image\SkImage_Picture.cpp" />
+    <ClCompile Include="..\..\skia\src\image\SkSurface_Picture.cpp" />
+    <ClCompile Include="..\..\skia\src\image\SkImage_Raster.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

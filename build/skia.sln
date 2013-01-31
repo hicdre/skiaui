@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "core", "skia_project\core.vcxproj", "{B7760B5E-BFA8-486B-ACFD-49E3A6DE8E76}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "views", "skia_project\views.vcxproj", "{29376F93-19FC-78E1-9A9C-0A80E4412442}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7760B5E-BFA8-486B-ACFD-49E3A6DE8E76}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B7760B5E-BFA8-486B-ACFD-49E3A6DE8E76}.Debug|Win32.Build.0 = Debug|Win32
+		{B7760B5E-BFA8-486B-ACFD-49E3A6DE8E76}.Release|Win32.ActiveCfg = Release|Win32
+		{B7760B5E-BFA8-486B-ACFD-49E3A6DE8E76}.Release|Win32.Build.0 = Release|Win32
+		{29376F93-19FC-78E1-9A9C-0A80E4412442}.Debug|Win32.ActiveCfg = Debug|Win32
+		{29376F93-19FC-78E1-9A9C-0A80E4412442}.Debug|Win32.Build.0 = Debug|Win32
+		{29376F93-19FC-78E1-9A9C-0A80E4412442}.Release|Win32.ActiveCfg = Release|Win32
+		{29376F93-19FC-78E1-9A9C-0A80E4412442}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>    
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{87FD8AC9-E85D-B219-71C8-12D94972F23A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>utils</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <ImportGroup Label="ExtensionSettings"/>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\config\define.global" />
+    <Import Project="..\..\config\skia_global.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\config\define.global" />
+    <Import Project="..\..\config\skia_global.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\..\..\gyp\bin\;$(MSBuildProjectDirectory)\..\..\gyp\bin\</ExecutablePath>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <TargetName>skia_utils</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SkiaPath)\include\config;$(SkiaPath)\include\core;$(SkiaPath)\include\effects;$(SkiaPath)\include\pipe;$(SkiaPath)\include\utils;$(SkiaPath)\include\utils\win;$(SkiaPath)\include\xml;$(SkiaPath)\src\utils;$(SkiaPath)\third_party\externals\cityhash\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_REDEFINE_ROOT2OVER2_TO_MAKE_ARCTOS_CONVEX;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_DEBUG;GR_DEBUG=1;SK_DEVELOPER=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>OpenGL32.lib;usp10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SkiaPath)\include\config;$(SkiaPath)\include\core;$(SkiaPath)\include\effects;$(SkiaPath)\include\pipe;$(SkiaPath)\include\utils;$(SkiaPath)\include\utils\win;$(SkiaPath)\include\xml;$(SkiaPath)\src\utils;$(SkiaPath)\third_party\externals\cityhash\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_REDEFINE_ROOT2OVER2_TO_MAKE_ARCTOS_CONVEX;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_DEBUG;GR_DEBUG=1;SK_DEVELOPER=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SkiaPath)\include\config;$(SkiaPath)\include\core;$(SkiaPath)\include\effects;$(SkiaPath)\include\pipe;$(SkiaPath)\include\utils;$(SkiaPath)\include\utils\win;$(SkiaPath)\include\xml;$(SkiaPath)\src\utils;$(SkiaPath)\third_party\externals\cityhash\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <Optimization>Full</Optimization>
+      <PreprocessorDefinitions>NDEBUG;SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_REDEFINE_ROOT2OVER2_TO_MAKE_ARCTOS_CONVEX;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_RELEASE;GR_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Lib>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>      
+    </Lib>
+    <Link>
+      <AdditionalDependencies>OpenGL32.lib;usp10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SkiaPath)\include\config;$(SkiaPath)\include\core;$(SkiaPath)\include\effects;$(SkiaPath)\include\pipe;$(SkiaPath)\include\utils;$(SkiaPath)\include\utils\win;$(SkiaPath)\include\xml;$(SkiaPath)\src\utils;$(SkiaPath)\third_party\externals\cityhash\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_REDEFINE_ROOT2OVER2_TO_MAKE_ARCTOS_CONVEX;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_RELEASE;GR_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>  
+  <ItemGroup>
+    <ClInclude Include="..\..\skia\src\utils\SkBitmapTransformer.h"/>
+    <ClInclude Include="..\..\skia\src\utils\SkBitmapChecksummer.h"/>
+    <ClInclude Include="..\..\skia\src\utils\SkCityHash.h"/>
+    <ClInclude Include="..\..\skia\src\utils\SkBitSet.h"/>
+    <ClInclude Include="..\..\skia\src\utils\SkBase64.h"/>
+    <ClInclude Include="..\..\skia\src\utils\SkThreadUtils.h"/>
+    <ClInclude Include="..\..\skia\src\utils\SkFloatUtils.h"/>
+    <ClInclude Include="..\..\skia\src\utils\SkThreadUtils_win.h"/>
+    <ClInclude Include="..\..\skia\src\utils\SkThreadUtils_pthread.h">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\utils\win\SkDWriteFontFileStream.h"/>
+    <ClInclude Include="..\..\skia\src\utils\win\SkDWriteGeometrySink.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkCountdown.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkParsePaint.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkUnitMappers.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkLayer.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkWGL.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkBoundaryPatch.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkRTConf.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkRunnable.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkPictureUtils.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkThreadPool.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkNullCanvas.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkNinePatch.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkNWayCanvas.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkInterpolator.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkMatrix44.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkDeferredCanvas.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkCullPoints.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkCubicInterval.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkCamera.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkCondVar.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkParse.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkMeshUtils.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkDumpCanvas.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkProxyCanvas.h"/>
+    <ClInclude Include="..\..\skia\include\utils\SkParsePath.h"/>
+    <ClInclude Include="..\..\skia\include\utils\win\SkAutoCoInitialize.h"/>
+    <ClInclude Include="..\..\skia\include\utils\win\SkIStream.h"/>
+    <ClInclude Include="..\..\skia\include\utils\win\SkHRESULT.h"/>
+    <ClInclude Include="..\..\skia\include\utils\win\SkTScopedComPtr.h"/>
+    <ClInclude Include="..\..\skia\include\utils\mac\SkCGUtils.h">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\skia\src\utils\SkCullPoints.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkCondVar.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkMatrix44.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkBitSet.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkThreadPool.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkBitmapTransformer.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkCityHash.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkMeshUtils.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkProxyCanvas.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkOSFile.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkInterpolator.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkNullCanvas.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkParseColor.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkUnitMappers.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkBoundaryPatch.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkDumpCanvas.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkCountdown.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkCamera.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkBase64.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkNWayCanvas.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkDeferredCanvas.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkNinePatch.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkParsePath.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkCubicInterval.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkLayer.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkBitmapChecksummer.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkThreadUtils_win.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkPictureUtils.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkParse.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkRTConf.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\SkThreadUtils_pthread.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\utils\SkThreadUtils_pthread_linux.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\utils\SkThreadUtils_pthread_other.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\utils\SkThreadUtils_pthread_mach.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\utils\win\SkDWriteGeometrySink.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\win\SkIStream.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\win\SkAutoCoInitialize.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\win\SkHRESULT.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\win\SkDWriteFontFileStream.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\win\SkWGL_win.cpp"/>
+    <ClCompile Include="..\..\skia\src\utils\mac\SkCreateCGImageRef.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <ImportGroup Label="ExtensionTargets"/>
+</Project>

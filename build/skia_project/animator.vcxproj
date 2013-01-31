@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>    
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BFE47DCA-0E22-3109-FB78-06E0D57A0A12}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>animator</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <ImportGroup Label="ExtensionSettings"/>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\config\define.global" />
+    <Import Project="..\..\config\skia_global.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\config\define.global" />
+    <Import Project="..\..\config\skia_global.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\..\..\gyp\bin\;$(MSBuildProjectDirectory)\..\..\gyp\bin\</ExecutablePath>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <TargetName>skia_animator</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SkiaPath)\include\config;$(SkiaPath)\include\core;$(SkiaPath)\include\effects;$(SkiaPath)\include\animator;$(SkiaPath)\include\views;$(SkiaPath)\include\xml;$(SkiaPath)\include\utils;$(SkiaPath)\include\images;$(SkiaPath)\src\utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_REDEFINE_ROOT2OVER2_TO_MAKE_ARCTOS_CONVEX;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_DEBUG;GR_DEBUG=1;SK_DEVELOPER=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>OpenGL32.lib;usp10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SkiaPath)\include\config;$(SkiaPath)\include\core;$(SkiaPath)\include\effects;$(SkiaPath)\include\animator;$(SkiaPath)\include\views;$(SkiaPath)\include\xml;$(SkiaPath)\include\utils;$(SkiaPath)\include\images;$(SkiaPath)\src\utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_REDEFINE_ROOT2OVER2_TO_MAKE_ARCTOS_CONVEX;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_DEBUG;GR_DEBUG=1;SK_DEVELOPER=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SkiaPath)\include\config;$(SkiaPath)\include\core;$(SkiaPath)\include\effects;$(SkiaPath)\include\animator;$(SkiaPath)\include\views;$(SkiaPath)\include\xml;$(SkiaPath)\include\utils;$(SkiaPath)\include\images;$(SkiaPath)\src\utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <Optimization>Full</Optimization>
+      <PreprocessorDefinitions>NDEBUG;SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_REDEFINE_ROOT2OVER2_TO_MAKE_ARCTOS_CONVEX;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_RELEASE;GR_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Lib>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>      
+    </Lib>
+    <Link>
+      <AdditionalDependencies>OpenGL32.lib;usp10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SkiaPath)\include\config;$(SkiaPath)\include\core;$(SkiaPath)\include\effects;$(SkiaPath)\include\animator;$(SkiaPath)\include\views;$(SkiaPath)\include\xml;$(SkiaPath)\include\utils;$(SkiaPath)\include\images;$(SkiaPath)\src\utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_REDEFINE_ROOT2OVER2_TO_MAKE_ARCTOS_CONVEX;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_RELEASE;GR_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayList.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkPaintParts.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawGradient.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkIntArray.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawBitmap.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayMovie.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawShader.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawLine.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawable.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkScriptRuntime.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkMatrixParts.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkOperandInterpolator.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkTextOnPath.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawPoint.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawEmboss.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkScript.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimateProperties.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawTransparentShader.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawTextBox.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDraw3D.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimateSet.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkScript2.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawMatrix.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayBounds.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimateActive.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayNumber.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimateMaker.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkScriptCallBack.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawSaveLayer.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayRandom.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawBlur.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkSnapshot.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimate.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayApply.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayInput.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawOval.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkMemberInfo.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkHitClear.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayable.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayAdd.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayXMLParser.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDump.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawColor.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimateBase.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayType.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawFull.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawPath.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayInclude.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayEvent.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkHitTest.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkOperand2.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkPostParts.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawText.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawClip.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawTo.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkExtras.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkOperand.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawDiscrete.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayScreenplay.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkBoundable.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawPaint.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimatorScript.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkXMLAnimatorWriter.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayTypes.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkPathParts.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawGroup.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayEvents.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkTDArray_Experimental.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkTypedArray.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkTextToPath.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayPost.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawDash.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawRectangle.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayMath.h"/>
+    <ClInclude Include="..\..\skia\src\animator\SkOpArray.h"/>
+    <ClInclude Include="..\..\skia\include\animator\SkAnimator.h"/>
+    <ClInclude Include="..\..\skia\include\animator\SkAnimatorView.h"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\skia\src\animator\SkOpArray.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawBlur.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkTime.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayMath.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawGradient.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkPaintParts.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDraw3D.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDump.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawEmboss.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawClip.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayAdd.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkSnapshot.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkParseSVGPath.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimator.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayApply.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkPathParts.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkBuildCondensedInfo.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayNumber.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkPostParts.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawExtraPathEffect.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayInclude.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawPoint.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawLine.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawTextBox.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayList.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimateActive.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayScreenplay.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawText.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkScriptTokenizer.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkBoundable.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawTransparentShader.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawTo.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayType.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkXMLAnimatorWriter.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawable.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawMatrix.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayEvents.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawRectangle.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkTextToPath.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimateMaker.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawGroup.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawDash.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkScriptRuntime.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayBounds.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkHitClear.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawSaveLayer.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimatorScript.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawPaint.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawPath.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkMatrixParts.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayXMLParser.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayRandom.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawFull.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimateBase.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayMovie.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimateField.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkTextOnPath.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawOval.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawShader.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimateSet.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayable.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkTypedArray.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkOperandIterpolator.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkScript.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayPost.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayEvent.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayTypes.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkHitTest.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkMemberInfo.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawBitmap.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayInput.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkGetCondensedInfo.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkScriptDecompile.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawDiscrete.cpp"/>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawColor.cpp"/>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <ImportGroup Label="ExtensionTargets"/>
+</Project>

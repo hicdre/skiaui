@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\images">
+      <UniqueIdentifier>{417A2AFC-675C-502D-5CF2-E9A58B72D6D5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\images\_excluded_files">
+      <UniqueIdentifier>{158E591E-B6EA-0C85-8F5A-18EAFA09B4CE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ports">
+      <UniqueIdentifier>{5BCFDFF2-7BF8-4B41-9D0B-3B13CB48CE9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ports\_excluded_files">
+      <UniqueIdentifier>{158E591E-B6EA-0C85-8F5A-18EAFA09B4CE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\images">
+      <UniqueIdentifier>{417A2AFC-675C-502D-5CF2-E9A58B72D6D5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\skia\src\images\SkImages.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkImageEncoder.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkImageDecoder.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkMovie.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkImageDecoder_libico.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkImageRef_GlobalPool.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkImageDecoder_wbmp.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\images\SkScaledBitmapSampler.h">
+      <Filter>src\images</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\images\SkImageRef.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkImageDecoder_libjpeg.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\bmpdecoderhelper.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkScaledBitmapSampler.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\images\SkImageRefPool.h">
+      <Filter>src\images</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\images\SkPageFlipper.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkImageRefPool.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkJpegUtility.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\images\bmpdecoderhelper.h">
+      <Filter>src\images</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\images\SkBitmapFactory.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkImageDecoder_libbmp.cpp">
+      <Filter>src\images</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkImageDecoder_libgif.cpp">
+      <Filter>src\images\_excluded_files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkImageEncoder_Factory.cpp">
+      <Filter>src\images\_excluded_files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkFDStream.cpp">
+      <Filter>src\images\_excluded_files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkImageDecoder_libpng.cpp">
+      <Filter>src\images\_excluded_files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkImageDecoder_Factory.cpp">
+      <Filter>src\images\_excluded_files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\images\SkMovie_gif.cpp">
+      <Filter>src\images\_excluded_files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\ports\SkImageDecoder_WIC.cpp">
+      <Filter>src\ports</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\ports\SkImageDecoder_CG.cpp">
+      <Filter>src\ports\_excluded_files</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\include\images\SkBitmapFactory.h">
+      <Filter>include\images</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\include\images\SkImageEncoder.h">
+      <Filter>include\images</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\include\images\SkImageRef.h">
+      <Filter>include\images</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\include\images\SkMovie.h">
+      <Filter>include\images</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\include\images\SkJpegUtility.h">
+      <Filter>include\images</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\include\images\SkImageDecoder.h">
+      <Filter>include\images</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\include\images\SkPageFlipper.h">
+      <Filter>include\images</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\include\images\SkImageRef_GlobalPool.h">
+      <Filter>include\images</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\gyp\images.gyp" />
+  </ItemGroup>
+</Project>

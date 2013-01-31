@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="src">
@@ -33,9 +33,6 @@
     </Filter>
     <Filter Include="include\views">
       <UniqueIdentifier>{D23515F3-31E8-1B27-FABB-5B45DAAF113D}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="gyp">
-      <UniqueIdentifier>{30B32512-2E13-32EA-B437-6F75133648E3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -171,8 +168,5 @@
     <ClInclude Include="..\..\skia\include\views\SkTouchGesture.h">
       <Filter>include\views</Filter>
     </ClInclude>
-    <None Include="..\..\gyp\views.gyp">
-      <Filter>gyp</Filter>
-    </None>
   </ItemGroup>
 </Project>

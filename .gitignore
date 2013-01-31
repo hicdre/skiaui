@@ -43,3 +43,5 @@ ipch/
 *.psess
 *.vsp
 
+#################
+/skia/out/

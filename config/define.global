@@ -5,6 +5,7 @@
     <SkiauiProjectPath>$(SolutionDir)..</SkiauiProjectPath>
     <SkiaPath>$(SkiauiProjectPath)\skia</SkiaPath>
     <LibOutputPath>$(SkiauiProjectPath)\lib</LibOutputPath>
+    <SampleOutputPath>$(SkiauiProjectPath)\output</SampleOutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <OutDir />
@@ -19,6 +20,9 @@
     </BuildMacro>
     <BuildMacro Include="LibOutputPath">
       <Value>$(LibOutputPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SampleOutputPath">
+      <Value>$(SampleOutputPath)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>

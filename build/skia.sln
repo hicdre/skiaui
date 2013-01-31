@@ -4,6 +4,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "core", "skia_project\core.v
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "views", "skia_project\views.vcxproj", "{29376F93-19FC-78E1-9A9C-0A80E4412442}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "angle", "skia_project\angle.vcxproj", "{A2DD6922-9A41-9BF7-CE0E-0A644D33A545}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "images", "skia_project\images.vcxproj", "{AF26B1F3-6039-C2A2-8644-E70FB6A271FD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "animator", "skia_project\animator.vcxproj", "{BFE47DCA-0E22-3109-FB78-06E0D57A0A12}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "utils", "skia_project\utils.vcxproj", "{87FD8AC9-E85D-B219-71C8-12D94972F23A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -18,6 +26,22 @@ Global
 		{29376F93-19FC-78E1-9A9C-0A80E4412442}.Debug|Win32.Build.0 = Debug|Win32
 		{29376F93-19FC-78E1-9A9C-0A80E4412442}.Release|Win32.ActiveCfg = Release|Win32
 		{29376F93-19FC-78E1-9A9C-0A80E4412442}.Release|Win32.Build.0 = Release|Win32
+		{A2DD6922-9A41-9BF7-CE0E-0A644D33A545}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A2DD6922-9A41-9BF7-CE0E-0A644D33A545}.Debug|Win32.Build.0 = Debug|Win32
+		{A2DD6922-9A41-9BF7-CE0E-0A644D33A545}.Release|Win32.ActiveCfg = Release|Win32
+		{A2DD6922-9A41-9BF7-CE0E-0A644D33A545}.Release|Win32.Build.0 = Release|Win32
+		{AF26B1F3-6039-C2A2-8644-E70FB6A271FD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AF26B1F3-6039-C2A2-8644-E70FB6A271FD}.Debug|Win32.Build.0 = Debug|Win32
+		{AF26B1F3-6039-C2A2-8644-E70FB6A271FD}.Release|Win32.ActiveCfg = Release|Win32
+		{AF26B1F3-6039-C2A2-8644-E70FB6A271FD}.Release|Win32.Build.0 = Release|Win32
+		{BFE47DCA-0E22-3109-FB78-06E0D57A0A12}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BFE47DCA-0E22-3109-FB78-06E0D57A0A12}.Debug|Win32.Build.0 = Debug|Win32
+		{BFE47DCA-0E22-3109-FB78-06E0D57A0A12}.Release|Win32.ActiveCfg = Release|Win32
+		{BFE47DCA-0E22-3109-FB78-06E0D57A0A12}.Release|Win32.Build.0 = Release|Win32
+		{87FD8AC9-E85D-B219-71C8-12D94972F23A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{87FD8AC9-E85D-B219-71C8-12D94972F23A}.Debug|Win32.Build.0 = Debug|Win32
+		{87FD8AC9-E85D-B219-71C8-12D94972F23A}.Release|Win32.ActiveCfg = Release|Win32
+		{87FD8AC9-E85D-B219-71C8-12D94972F23A}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>    
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\animator">
+      <UniqueIdentifier>{64CF1978-2F37-EFE2-EBCA-6716451E1606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\animator">
+      <UniqueIdentifier>{64CF1978-2F37-EFE2-EBCA-6716451E1606}</UniqueIdentifier>
+    </Filter>    
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayList.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkOpArray.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawBlur.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkTime.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayMath.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawGradient.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkPaintParts.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDraw3D.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDump.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkPaintParts.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawGradient.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawEmboss.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawClip.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkIntArray.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayAdd.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkSnapshot.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkParseSVGPath.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawBitmap.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimator.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayMovie.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawShader.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayApply.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawLine.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkPathParts.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawable.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkScriptRuntime.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkMatrixParts.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkBuildCondensedInfo.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayNumber.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkPostParts.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkOperandInterpolator.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawExtraPathEffect.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkTextOnPath.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayInclude.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawPoint.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawLine.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawPoint.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawTextBox.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawEmboss.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkScript.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayList.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimateProperties.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimateActive.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayScreenplay.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawTransparentShader.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawText.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawTextBox.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkScriptTokenizer.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDraw3D.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimateSet.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkScript2.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkBoundable.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawTransparentShader.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawTo.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawMatrix.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayBounds.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayType.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimateActive.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkXMLAnimatorWriter.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayNumber.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawable.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawMatrix.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimateMaker.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayEvents.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkScriptCallBack.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawRectangle.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkTextToPath.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawSaveLayer.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimateMaker.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayRandom.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawGroup.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawBlur.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkSnapshot.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawDash.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimate.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayApply.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkScriptRuntime.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayInput.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawOval.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkMemberInfo.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayBounds.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkHitClear.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayable.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayAdd.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayXMLParser.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkHitClear.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDump.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawColor.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimateBase.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawSaveLayer.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimatorScript.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawPaint.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayType.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawPath.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawFull.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkMatrixParts.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayXMLParser.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawPath.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayRandom.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawFull.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimateBase.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayInclude.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayMovie.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimateField.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkTextOnPath.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayEvent.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkHitTest.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawOval.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawShader.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkOperand2.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkAnimateSet.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayable.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkPostParts.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkTypedArray.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawText.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawClip.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawTo.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkExtras.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkOperand.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawDiscrete.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkOperandIterpolator.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayScreenplay.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkScript.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayPost.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkBoundable.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawPaint.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkAnimatorScript.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayEvent.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayTypes.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkHitTest.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkMemberInfo.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawBitmap.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkXMLAnimatorWriter.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayTypes.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkPathParts.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawGroup.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayEvents.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkTDArray_Experimental.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDisplayInput.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkTypedArray.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkGetCondensedInfo.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkTextToPath.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayPost.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawDash.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDrawRectangle.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\src\animator\SkDisplayMath.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkScriptDecompile.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\src\animator\SkOpArray.h">
+      <Filter>src\animator</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawDiscrete.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skia\src\animator\SkDrawColor.cpp">
+      <Filter>src\animator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\skia\include\animator\SkAnimator.h">
+      <Filter>include\animator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\skia\include\animator\SkAnimatorView.h">
+      <Filter>include\animator</Filter>
+    </ClInclude>    
+  </ItemGroup>
+</Project>
